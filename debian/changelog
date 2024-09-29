@@ -1,0 +1,5 @@
+systemd-boot-signer (0.1) unstable; urgency=medium
+
+  * Initial Release
+
+ -- Vasudev Kamath <vasudev@debian.org>  Sun, 29 Sep 2024 00:01:55 +0530

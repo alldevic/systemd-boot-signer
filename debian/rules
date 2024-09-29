@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+#
+export DH_OPTKIONS
+
+install:
+	mkdir -p debian/systemd-boot-signer/usr/bin
+	cp sign_systemd_boot debian/systemd-boot-signer/usr/bin
+	dh $@
+
+%:
+	dh $@

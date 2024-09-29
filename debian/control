@@ -1,0 +1,16 @@
+Source: systemd-boot-signer
+Section: misc
+Priority: optional
+Maintainer: Vasudev Kamath <vasudev@debian.org>
+Build-Depends: debhelper (>= 13)
+Standards-Version: 4.7.0
+
+Package: systemd-boot-signer
+Architecture: all
+Depends: ${misc:Depends},
+ sbsigntool
+Description: package to re-sign the systemd-boot on upgrade
+ This package runs the secureboot signing of systemd-boot binary when the
+ systemd-boot-efi file under /usr/lib/systemd/boot/efi/systemd-bootx64.efi is
+ updated.
+ .

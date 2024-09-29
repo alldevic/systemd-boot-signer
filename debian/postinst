@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+set -eu
+
+echo "DEBUG: systemd-boot-signer postinst called, $# args: $@"
+
+if [ "$1" = "triggered" ]; then
+    for triggername in $2; do
+        echo DEBUG: processing trigger "'$triggername'"
+        case "$triggername" in
+            /usr/lib/systemd/boot/efi/systemd-bootx64.efi)
+                sign_systemd_boot
+                ;;
+            *)
+                echo "unknown/unhandled trigger!"
+                ;;
+        esac
+    done
+fi
+
+#DEBHELPER#
