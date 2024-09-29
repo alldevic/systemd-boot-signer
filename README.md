@@ -1,7 +1,7 @@
 # systemd-boot-signer
 
 A package which registers interest trigger on
-`/usr/lib/systemd/boot/efi/systemd-bootx64.efi`` with dpkg. On upgrading of
+`/usr/lib/systemd/boot/efi/systemd-bootx64.efi` with `dpkg`. On upgrading of
 `systemd-boot-efi`` package the postinst of this package will be invoked by dpkg
 with following arguments.
 
