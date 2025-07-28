@@ -1,0 +1,8 @@
+.dockerignore
+.gitignore
+.git/
+Dockerfile
+Makefile
+LICENSE
+README.md
+get-deb.sh
