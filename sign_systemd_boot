@@ -3,7 +3,7 @@
 set -e
 
 echo "Signing the new systemd-bootx64.efi"
-sbsign --key /etc/secureboot/db.key --cert /etc/secureboot/db.crt \
+sbsign --key /etc/secureboot/db.key --cert /etc/secureboot/db.pem \
     /usr/lib/systemd/boot/efi/systemd-bootx64.efi
 
 echo "Invoking bootctl install to copy stuff"
